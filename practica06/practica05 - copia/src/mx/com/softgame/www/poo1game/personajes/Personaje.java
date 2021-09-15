@@ -3,6 +3,12 @@ public class Personaje{
 	private String nombre;
 	private int edad;
 
+	public void setNombre(String nombre){
+		if (nombre.length() >3 && nombre.lenght()<20){
+			this.nombre=nombre;
+		}
+	}
+
 	public Personaje(String nombre){
 		edad = 0;
 		this.nombre = nombre;
