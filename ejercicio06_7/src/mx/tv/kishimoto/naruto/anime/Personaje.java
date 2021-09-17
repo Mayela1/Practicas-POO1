@@ -9,7 +9,6 @@ public class Personaje{
 			this.poder=valoresPoder;
 		}else{
 			this.poder=0
-		
 		}
 	}
 	public void setPoder(int sumaPoder){
@@ -20,6 +19,5 @@ public class Personaje{
 
 	public void getDatos(){
 		System.out.println(nombre + "\t" + poder);
-
 	}
 }
