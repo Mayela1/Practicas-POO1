@@ -17,7 +17,7 @@ public class Personaje{
 		}
 	}
 
-	public void getDatos(){
-		System.out.println(nombre + "\t" + poder);
+	public String getDatos(){
+		return (nombre + "\t" + poder);
 	}
 }
