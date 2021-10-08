@@ -1,5 +1,5 @@
 package mx.com.softgame.www.poo1game.pruebas;
-import mx.com.softgame.www.poo1game.personajes.Persona;
+import mx.com.softgame.www.poo1game.personajes.Personaje;
 public class PruebaPersonaje{
 	public static void main(String[] args) {
 		
