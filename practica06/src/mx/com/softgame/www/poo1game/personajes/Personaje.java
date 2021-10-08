@@ -3,19 +3,15 @@ public class Personaje{
 	private String nombre;
 	private int edad;
 
-	public void setNombre(String nombre){
-		if (nombre.length() >3 && nombre.lenght()<20){
-			this.nombre=nombre;
-		}
-	}
-
-	public Personaje(String nombre){
-		edad = 0;
+	public Personaje(String nombre, int edad){
+		this.edad = edad;
 		this.nombre = nombre;
 	}
 
 	public void setNombre(String nombre){
-	    this.nombre = nombre;
+		if (nombre.length() > 3 && nombre.length() <20) {
+			this.nombre = nombre;
+		}
 	}
 
 	public String getNombre(){
@@ -32,8 +28,12 @@ public class Personaje{
 
 	public boolean setEdad(int edad){
 		if(edad > 0 && edad <120){
+			this.edad = edad;
 			return true;
 		}
 		return false;
+	}
+	public String getDetalle(){
+		return (nombre + "\t" + edad);
 	}
 }
