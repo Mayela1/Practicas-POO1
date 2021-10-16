@@ -1,16 +1,23 @@
 package edu.uaz.ingsoft.appcovid.universitarios;
 public class Universitario{
-	public nombre String;
-	public Universitario(String nombre){
+	private String nombre;
+	private int id;
+	public Universitario(int id, String nombre){
 		this.nombre = nombre;
+		this.id = id;
 	}
 	public boolean equals(Object o){
-		boolean result = false;
-		if ( (o != null) && (o instanceof Universitario)){
-			Universitario d =(Universitario) o;
-			if (this.nombre.equals()){
-				result = true;
-			}
+		boolean isEquals = false;
+		if ( o != null && o instanceof Universitario){
+			Universitario u =(Universitario) o;
+			isEquals = u.nombre.equals(nombre) && u.id == id;
 		}
+		return isEquals;
+	}
+	public int hashCode(){
+		return nombre.hashCode() * id;
+	}
+	public String toString(){
+		return id + " " + nombre;
 	}
 }
