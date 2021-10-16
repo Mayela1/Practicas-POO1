@@ -1,4 +1,5 @@
-package mx.com.softgame.www.poo1game.personajes;
+package mx.com.softgame.www.poo1game.personajes.malos;
+import mx.com.softgame.www.poo1game.personajes.Personaje;
 public class Zombie extends Personaje{
 	public boolean ataque;
 
@@ -18,8 +19,14 @@ public class Zombie extends Personaje{
 	public String getDetalle(){
 		return super.getDetalle()+" " + ataque;
 	}
-
-	public int decVida(int d){
+	public void decVida(){
+		if (ataque == true){
+			super.decVida(3);
+		} else{
+			super.decVida(2);
+		}		 
+	}
+	public void decVida(int d){
 		if(ataque == true ){
 			super.decVida(d*3);
 		} else {

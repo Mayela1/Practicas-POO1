@@ -8,8 +8,7 @@ public class Personaje{
 		this.vida = vida;
 	}
 	public Personaje(String nombre){
-		this.nombre = nombre;
-		vida = 3;
+		this(nombre,3);
 	}
 
 	public void setNombre(String nombre){
@@ -22,17 +21,13 @@ public class Personaje{
 	    return nombre;
 	}
 
-	public void saludar(){
-		System.out.println("Hola Alumno de POO " + nombre);
-	}
-
 	public int getVida(){
 		return vida;
 	}
 
 	public boolean setVida(int vida){
 		boolean result = false;
-		if(vida > 0 && edad <100){
+		if(vida > 0 && vida <100){
 			this.vida = vida;
 			result = true;
 		}
@@ -41,14 +36,14 @@ public class Personaje{
 	public String getDetalle(){
 		return (nombre + "\t" + vida);
 	}
+
 	public void decVida(){
-		decVida(1);
-		 
+		decVida(1);	 
 	}
-	public int decVida(int d){
-		d = this.vida - d;
-		if (d> 0){
-			return d;
+
+	public void decVida(int d){
+		if ((vida - d)> 0){
+			vida -= d;
 		}
 	}
 }

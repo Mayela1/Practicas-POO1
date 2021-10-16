@@ -1,11 +1,12 @@
-package mx.com.softgame.www.poo1game.personajes;
+package mx.com.softgame.www.poo1game.personajes.buenos;
+import  mx.com.softgame.www.poo1game.personajes.Personaje;
 public class Planta extends Personaje{
 	public char escudo;
 	public Planta(String nombre,int vida, char escudo){
 		super(nombre,vida);
 		this.escudo = escudo;
 	}
-	public Planta(String nombre, boolean escudo){
+	public Planta(String nombre, char escudo){
 		this(nombre,3,escudo);
 	}
 	public Planta(String nombre, int vida){
@@ -25,7 +26,7 @@ public class Planta extends Personaje{
 			super.decVida();
 		}		 
 	}
-	public int decVida(int d){
+	public void decVida(int d){
 		if(escudo == 'A'){
 			super.decVida(d*2);
 		} else {
