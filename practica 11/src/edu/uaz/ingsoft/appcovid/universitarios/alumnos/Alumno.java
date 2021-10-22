@@ -1,15 +1,15 @@
 package edu.uaz.ingsoft.appcovid.universitarios.alumnos;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
 public class Alumno extends Universitario{
-	private int calif;
+	private float promedio;
+	private Calificacion[] calificaciones = new Calificacion[5];
 
-	public Alumno(int id, String nombre, int calif){
+	public Alumno(int id, String nombre){
 		super(id, nombre);
-		setCalif(calif);
 	}
 
 	public Alumno(int id, String nombre){
-		this(id, nombre, 5);
+		this(id, nombre);
 	}
 
 	public void setCalif(int calif){
