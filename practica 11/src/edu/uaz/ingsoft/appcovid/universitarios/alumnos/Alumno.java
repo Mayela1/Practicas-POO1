@@ -28,8 +28,8 @@ public class Alumno extends Universitario{
 		return "Alumno" + super.toString() + calif;
 	}
 	public void setCalificaciones(){
-		for (int i = 0 ; i < calificaciones.lenght ; i ++ ) {
-			calificaciones[i].CERO;
+		for (int i = 0 ; i < 5 ; i ++ ) {
+			calificaciones[i].super(CERO);
 		}
 	}
 	public void setCalificaciones(){
