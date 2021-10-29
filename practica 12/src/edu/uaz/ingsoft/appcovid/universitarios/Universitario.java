@@ -1,5 +1,5 @@
 package edu.uaz.ingsoft.appcovid.universitarios;
-public class Universitario{
+public abstract class Universitario{
 	private String nombre;
 	private int id;
 	public Universitario(int id, String nombre){
@@ -20,4 +20,5 @@ public class Universitario{
 	public String toString(){
 		return id + " " + nombre;
 	}
+	public abstract void getNota();
 }
