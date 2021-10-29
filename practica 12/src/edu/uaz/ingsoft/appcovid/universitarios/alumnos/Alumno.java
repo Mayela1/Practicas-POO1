@@ -1,7 +1,7 @@
 package edu.uaz.ingsoft.appcovid.universitarios.alumnos;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
 import edu.uaz.ingsoft.appcovid.utlis.Calificacion;
-public class Alumno extends Universitario{
+public class Alumno extends Universitario implements Tutorias{
 	private float promedio;
 	private Calificacion[] calificaciones = new int[5];
 
@@ -33,6 +33,8 @@ public class Alumno extends Universitario{
 		}
 	}
 	public void setCalificaciones(){
-
+	}
+	public void realizarTutorias(){
+		System.out.println("Recibe tutorias");
 	}
 }
